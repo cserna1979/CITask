@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     EditText editTextUser;
     EditText editTextPass;
     Button buttonConnect;
-    private UserHandler uh;
     private Toast messToast;
     private User user;
     private GetWebService getWebService;

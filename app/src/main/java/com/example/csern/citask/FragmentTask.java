@@ -7,6 +7,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 
 /**
@@ -18,9 +23,15 @@ import android.view.ViewGroup;
 public class FragmentTask extends Fragment {
 
     private OnFragmentInteractionListener mListener;
+    private User user;
+    private TextView textViewDate;
 
     public FragmentTask() {
         // Required empty public constructor
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
 
@@ -30,6 +41,13 @@ public class FragmentTask extends Fragment {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_fragment_task, container, false);
+
+        textViewDate = (TextView) view.findViewById (R.id.textViewDate);
+
+        Calendar calendar = Calendar.getInstance();
+        textViewDate.setText(new SimpleDateFormat("MM-yyyy").format(calendar.getTime()));
+        voy por aqui
+
         return view;
     }
 

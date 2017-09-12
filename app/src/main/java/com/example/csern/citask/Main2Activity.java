@@ -40,6 +40,7 @@ public class Main2Activity extends AppCompatActivity
         FragmentManager fm = getFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
         FragmentTask fragmentTask = new FragmentTask();
+        fragmentTask.setUser(user);
         transaction.add(R.id.layoutmain, fragmentTask);
         transaction.commit();
 
