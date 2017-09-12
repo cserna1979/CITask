@@ -6,13 +6,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.csern.citask.Main2Activity"
+    android:id="@+id/layoutmain"
     tools:showIn="@layout/app_bar_main2">
-
-    <fragment
-        android:id="@+id/fragmentTask"
-        android:name="com.example.csern.citask.FragmentTask"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout="@layout/fragmentmain" />
 
 </android.support.constraint.ConstraintLayout>
