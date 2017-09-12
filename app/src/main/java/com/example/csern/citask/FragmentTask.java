@@ -46,7 +46,8 @@ public class FragmentTask extends Fragment {
 
         Calendar calendar = Calendar.getInstance();
         textViewDate.setText(new SimpleDateFormat("MM-yyyy").format(calendar.getTime()));
-        voy por aqui
+        createCalendar(calendar);
+
 
         return view;
     }
@@ -88,5 +89,12 @@ public class FragmentTask extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public void createCalendar (Calendar calendar) {
+        int dayInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+        Calendar calForFirstDay = Calendar.getInstance();
+        calendar.set(Calendar.DATE, 1);
+        int firstDay = calForFirstDay.get(Calendar.DAY_OF_WEEK);
     }
 }
