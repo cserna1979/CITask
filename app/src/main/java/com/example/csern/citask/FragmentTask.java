@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
 
 /**
@@ -40,7 +39,7 @@ public class FragmentTask extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view = inflater.inflate(R.layout.fragment_fragment_task, container, false);
+        View view = inflater.inflate(R.layout.fragment_task, container, false);
 
         textViewDate = (TextView) view.findViewById (R.id.textViewDate);
 
